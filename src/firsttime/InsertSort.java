@@ -1,4 +1,7 @@
+package firsttime;
+
 /**
+ * ≤Â»Î≈≈–Ú
  * Created by showt on 2015/10/22.
  */
 public class InsertSort {

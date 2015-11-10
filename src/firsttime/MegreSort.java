@@ -1,4 +1,7 @@
+package firsttime;
+
 /**
+ * ·ÖÖÎ·¨
  * Created by showt on 2015/10/22.
  */
 public class MegreSort {
@@ -52,7 +55,7 @@ public class MegreSort {
     public static void main(String [] args){
         //int A[] = new int[] {2,3,5,7,10,11,13};
         //int A[] = new int[] {7,10,11,1,2,3,5};
-        //new MegreSort().megre(A,0,2,6);
+        //new firsttime.MegreSort().megre(A,0,2,6);
         //for (int i=0;i<A.length;i++){
             //System.out.println(A[i]);
         //}
@@ -60,7 +63,7 @@ public class MegreSort {
         MegreSort.solutation(A,0,6);
 //        int A[] = new int[] {1,1,7,32,0,2,5};
 //        int p = 0,n=3,r=6;
-//        MegreSort.megre(A,p,n,r);
+//        firsttime.MegreSort.megre(A,p,n,r);
 
         for (int i=0;i<A.length;i++){
             System.out.println(A[i]);

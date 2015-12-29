@@ -19,8 +19,14 @@ public class HeapMaximum {
      * @param A ถัสýื้
      * @return
      */
-    public static int heapExtractMax(int [] A){
-
-        return 0;
+    public static int heapExtractMax(int [] A) throws Exception {
+        if (A.length < 1){
+            throw new Exception("heap underflow");
+        }
+        int tmp = A[0];
+        A[0] = A[A.length-1];
+        A[A.length-1] = tmp;
+        HeapSort.max_heapify(A,0,A.length-1);
+        return A[A.length-1];
     }
 }

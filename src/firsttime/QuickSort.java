@@ -19,7 +19,6 @@ public class QuickSort {
         }else{
             System.out.println("p="+p+" r="+r);
             return;
-            //throw new Exception("wrong array index!");
         }
     }
 

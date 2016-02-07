@@ -1,5 +1,7 @@
 package firsttime;
 
+import java.util.Arrays;
+
 /**
  * ∂—≈≈–Ú
  * Created by prototype on 2015/11/3.
@@ -111,9 +113,6 @@ public class HeapSort {
         }
         System.out.println("==========================");
         heapSort(B);
-        for (int i=0;i<B.length;i++){
-            System.out.println(B[i]);
-        }
-
+        System.out.println(Arrays.toString(B));
     }
 }

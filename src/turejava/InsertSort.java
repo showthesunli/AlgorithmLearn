@@ -1,6 +1,7 @@
 package turejava;
 
-import java.util.Arrays;
+import turejava.element.Element;
+import turejava.element.insertsortelement.InsertSortElement;
 
 /**
  * ≤Â»Î≈≈–Ú
@@ -21,7 +22,7 @@ public class InsertSort <T extends Element>{
     }
 
     public static void main(String [] args){
-        Element<Integer>[] A = new Element[]{new insertSortElement(5),new insertSortElement(2),new insertSortElement(4),new insertSortElement(6)};
+        Element<Integer>[] A = new Element[]{new InsertSortElement(5),new InsertSortElement(2),new InsertSortElement(4),new InsertSortElement(6)};
         new InsertSort<Element>().soluation(A);
         for (Element<Integer> key : A){
             System.out.println(key.getElementData());

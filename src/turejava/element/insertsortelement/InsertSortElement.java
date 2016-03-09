@@ -1,13 +1,15 @@
-package turejava;
+package turejava.element.insertsortelement;
+
+import turejava.element.Element;
 
 /**
  * Created by prototype on 2016/3/3.
  */
-public class insertSortElement implements Element <Integer>{
+public class InsertSortElement implements Element<Integer> {
 
     private int data;
 
-    public insertSortElement(int data) {
+    public InsertSortElement(int data) {
         this.data = data;
     }
 

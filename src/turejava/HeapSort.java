@@ -25,7 +25,6 @@ public class HeapSort<T extends Element> {
      * @return 左儿子节点下标
      */
     private int left(int i) {
-
         return 2 * i + 1;
     }
 
@@ -41,7 +40,7 @@ public class HeapSort<T extends Element> {
 
 
     /**
-     * 保持最大堆的性质，即使堆顶点的元素下降
+     * 假设i的左子树和右子树都是最大堆，保持最大堆的性质,即:使堆顶点的元素下降
      *
      * @param A
      * @param i
@@ -59,20 +58,22 @@ public class HeapSort<T extends Element> {
             largest = right;
         }
         if (largest != i) {
+            T swapTmp = A[i];
             A[i] = A[largest];
-            maxHeapFiy(A, largest, heapSizeIndex-largest);
+            A[largest] =  swapTmp;
+            maxHeapFiy(A, largest, heapSizeIndex);
         }
         return A;
     }
 
     /**
-     * 将数组A构建成最大堆
+     * 建堆，将数组A构建成最大堆
      *
      * @param A 元素数组
      * @return
      */
     public T[] buildMaxHeap(T[] A, int heapSizeIndex) {
-        for (int i = heapSizeIndex/2; i >= 0; i--) {
+        for (int i = (heapSizeIndex-1)/2; i >= 0; i--) {
             this.maxHeapFiy(A, i, heapSizeIndex);
         }
         return A;
@@ -88,11 +89,12 @@ public class HeapSort<T extends Element> {
         int heapSizeIndex = A.length - 1;
         this.buildMaxHeap(A, heapSizeIndex);
         T tmp;
-        for (int i = heapSizeIndex; i >=0 ; i--) {
+        for (; heapSizeIndex>=0 ; ) {
             tmp = A[heapSizeIndex];
-            A[heapSizeIndex] = A[i];
-            A[i] = tmp;
-            this.maxHeapFiy(A, i, heapSizeIndex - i);
+            A[heapSizeIndex] = A[0];
+            A[0] = tmp;
+            heapSizeIndex--;
+            this.maxHeapFiy(A, 0, heapSizeIndex);
         }
         return A;
     }
@@ -103,8 +105,9 @@ public class HeapSort<T extends Element> {
         HeapSort<Element> hs = new HeapSort();
         hs.heapSort(A);
         for (Element<Integer> a : A) {
-            System.out.println(a.getElementData());
+            System.out.print(a.getElementData() + " ");
         }
+        System.out.println();
 
     }
 

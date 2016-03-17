@@ -1,7 +1,7 @@
 package turejava;
 
 import turejava.element.Element;
-import turejava.element.insertsortelement.InsertSortElement;
+import turejava.element.elementdef.InsertSortElement;
 
 /**
  * ≤Â»Î≈≈–Ú

@@ -1,11 +1,12 @@
 package turejava;
 
 import turejava.element.Element;
-import turejava.element.insertsortelement.InsertSortElement;
+import turejava.element.elementdef.InsertSortElement;
 import turejava.util.*;
 
 
 /**
+ * øÏ≈≈–Ú
  * Created by prototype on 2016/3/15.
  */
 public class QuickSort <T extends Element>{

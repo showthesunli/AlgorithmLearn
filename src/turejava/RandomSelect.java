@@ -27,11 +27,15 @@ public class RandomSelect {
     }
 
     public int randomPation(int [] A,int p,int r){
+        if (p==r){
+            return p;
+        }
         int ri = (int)(Math.random()*(r-p+1)+p);
         int tmp = A[r];
         A[r] =  A[ri];
         A[ri] = tmp;
-        return QuickSort.partition(A,p,r);
+        int x = QuickSort.partition(A,p,r);
+        return x;
     }
 
     public static void main(String [] args){
